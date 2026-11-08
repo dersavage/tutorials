@@ -1,0 +1,25 @@
+baseURL = 'https://dersavage.github.io/tutorials/'
+title = 'Tutorials'
+theme = 'hugo-book'
+disablePathToLower = true
+
+[markup.goldmark.renderer]
+  unsafe = true
+[markup.tableOfContents]
+  startLevel = 2
+  endLevel = 3
+[markup.highlight]
+  style = 'base16-snazzy'
+
+[params]
+  BookSection = 'docs'
+  BookToC = true
+  BookSearch = false
+  BookComments = false
+
+[[menus.after]]
+  name = 'Main site'
+  url = 'https://dersavage.github.io/site/'
+[[menus.after]]
+  name = 'Computer Science blog'
+  url = 'https://dersavage.github.io/cs/'
