@@ -1,0 +1,20 @@
+module.exports={p:[
+`<code>repeat</code> is perfect when you know how many times. But often you want something slightly different: "do this for each number from 1 to 10", or "keep going until the water boils". UCBLogo gives you three loops for those jobs: <code>for</code>, <code>while</code> and <code>until</code>.`,
+`The first input to <code>for</code> is a little list of settings: the name of a variable (<code>i</code>), where it starts (1), and where it ends (5). The second input is the list of instructions to run for each value. Inside the loop, <code>:i</code> holds the current number. Here we print the squares of 1 to 5.`,
+`Notice something nice: the variable name sits in the list without a colon or a quote, because <code>for</code> is the one defining it. It is the single place where a Logo variable gets named in bare form, and it is worth a moment of attention.`,
+`<strong>Python</strong>'s <code>for</code> loop looks like this. It's good, and I use it constantly. Yes, the end of <code>range</code> is exclusive; that is the price.`,
+`<strong>Raku</strong> keeps the inclusive range, and the loop variable is declared with a pointy block.`,
+`A step is optional. Add a third number to the settings list and <code>for</code> counts by that amount, even downwards.`,
+`Counting from 10 down to 0 in steps of -5, and from 1 to 2 in halves. Decimal steps work, which is a feature many languages make surprisingly awkward.`,
+`Python's <code>range</code> refuses decimals, so you fall back on a different loop. Raku's sequence operator <code>...</code> is wonderful: you show it the first couple of values and it works out the pattern. It's a better idea than Logo's, I'll concede, but it is also one more thing to learn.`,
+`Now for the other two loops. <code>for</code> counts; <code>while</code> and <code>until</code> <em>wait for a condition</em>. They each take a condition list and an instruction list, and they re-check the condition every time round.`,
+`<code>while</code> means: keep running the instructions as long as the condition stays true. Each time we print <code>:n</code> and then reduce it by one. When <code>:n</code> reaches 0, the condition <code>:n > 0</code> is false and the loop stops. If you forget the <code>make "n :n - 1</code> line, the condition never changes and Logo loops forever. (This interpreter gives up after four million steps and tells you so. Be glad.)`,
+`Python and Raku have nice little shorthands here (<code>-=</code> and <code>--</code>). Logo has no such operator: you write the whole thing out, <code>make "n :n - 1</code>. I find that wordy but oddly clarifying: it makes you see that you are replacing the old value of <code>n</code> with a new one.`,
+`<code>until</code> is just <code>while</code> turned inside out. It keeps going <em>until</em> the condition becomes true.`,
+`Same machinery, opposite test. Use whichever one reads better as a sentence. "While there are tickets left" and "until the queue is empty" are both perfectly good English, and you should pick the one that matches how you think about the problem.`,
+`Python has no <code>until</code>; you write <code>while not</code>. Raku does have it (<code>until</code>), and so does Perl, its ancestor.<sup>[1]</sup>`,
+`Let's put <code>for</code> and a procedure together: a times table.`,
+`The <code>word</code> command glues pieces into a single word, which is why there are no spaces in the output. The last bit, <code>:i * :n</code>, is evaluated, not quoted, so each line shows the real product. You build something useful from a loop, an operator and a procedure, and it all fits in four lines. Noice.`,
+`<strong>Which loop?</strong> Know the count: <code>repeat</code>. Need a counter variable: <code>for</code>. Waiting on a condition: <code>while</code> or <code>until</code>. When in doubt, try <code>repeat</code> first; it is the simplest. Nice little language, isn't it?`
+],
+fn:[`Raku is a descendant of Perl, and carries a lot of Perl's habits with it. It is nicer about it, mostly. :)`]};
