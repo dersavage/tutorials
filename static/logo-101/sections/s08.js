@@ -3,16 +3,16 @@ id: 8,
 title: "Operations: procedures that answer",
 tagline: "output hands a value back to whoever asked, and that one idea is what lets small procedures snap together",
 blocks: [
-P(`Up to now every procedure you wrote <em>did</em> something: it printed a line, or changed a variable. Those are called <strong>commands</strong>. This lesson is about the other kind of procedure, the kind that <em>answers</em>. In Logo an answering procedure is called an <strong>operation</strong>, and you have been using built-in ones since lesson 3. <code>sum 2 3</code> does not print anything. It <em>is</em> 5, and something else (usually <code>print</code>) decides what to do with it. Remember the two kinds of things from lesson one, those that act and those that are acted upon? An operation is the interesting hybrid: it acts on its inputs, and then it <em>becomes</em> the thing that the next command acts on.`),
-P(`Now, I am spending a whole lesson on this, because it is the single most useful distinction in the language, and the one beginners fumble hardest. If you get it now, recursion, loops and data processing will all feel natural later. If you don't, they will feel like magic spells.`),
-P(`Here is an operation of our own. The new word is <code>output</code> (you can abbreviate it to <code>op</code>, but spell it out while you are learning):`),
+P(`Up to now every procedure you wrote <em>did</em> something: it printed a line, or changed a variable. Those are called <strong>commands</strong>. This lesson is about the other kind of procedure, the kind that <em>answers</em>. In Logo an answering procedure is called an <strong>operation</strong>, and you have been using built-in ones since lesson 3. <code>sum 2 3</code> does not print anything. It <em>is</em> 5, and something else (usually <code>print</code>) decides what to do with it. Remember the two kinds of things from lesson one, those that act and those that are acted upon? An operation is the interesting hybrid: it acts on its inputs, and then it <em>becomes</em> the thing the next command acts on.`),
+P(`I am spending a whole lesson on this, because it is the single most useful distinction in the language, and the one beginners fumble hardest. Get it now, and recursion, loops and data processing will all feel natural later. Miss it, and they will feel like magic spells. Not nice.`),
+P(`Here is an operation of our own. The new word is <code>output</code> (you can abbreviate it to <code>op</code>, but spell it out while you are learning).`),
 L(`to double :n
   output :n * 2
 end
 
 print double 4`, {"expect":"8"}),
 P(`Read it aloud: "to double, given n, output n times two". When Logo reaches <code>output</code> it works out the value, hands it to whoever called <code>double</code>, and <em>leaves the procedure right there</em>. The call <code>double 4</code> is replaced by the value 8, and then <code>print</code> prints it. Notice that <code>double</code> itself never printed anything. That is the point. A procedure that answers is more reusable than one that prints, because the caller decides what to do with the answer.`),
-P(`<strong>In Python</strong> the same job is done by <code>return</code>. Nothing surprising, except for one thing worth knowing: a Python function that doesn't return anything quietly returns <code>None</code>, so the language never tells you that you mixed up the two kinds of procedure.<sup>[1]</sup>`),
+P(`<strong>In Python</strong> the same job is done by <code>return</code>. Nothing surprising, except one thing: a Python function that does not return anything quietly returns <code>None</code>, so the language never tells you that you mixed up the two kinds of procedure.<sup>[1]</sup>`),
 PY(`def double(n):
     return n * 2
 
@@ -24,30 +24,30 @@ say double(4);   # 8`),
 P(`Because <code>double 4</code> is just a value, you can use it anywhere a value fits: as input to another instruction, inside arithmetic, even as input to <code>double</code> itself.`),
 L(`print (double 4) + 1
 print double double 3`, {"expect":"9\n12"}),
-P(`Look at the second line. Logo reads left to right: <code>print</code> wants one input, so it looks at what follows; <code>double</code> wants one input, so it looks further; and the inner <code>double 3</code> is 6, which feeds the outer <code>double</code> to give 12. No parentheses were needed. That works because every procedure has a fixed number of inputs, and Logo always knows how many to grab. (The parentheses in the first line are there because I wanted <code>+ 1</code> to apply to the answer of <code>double 4</code>, not to its input.)`),
+P(`Look at the second line. Logo reads left to right: <code>print</code> wants one input, so it looks at what follows; <code>double</code> wants one input, so it looks further; and the inner <code>double 3</code> is 6, which feeds the outer <code>double</code> to give 12. No parentheses were needed. That works because every procedure has a fixed number of inputs, and Logo always knows how many to grab. (The parentheses in the first line are there because I wanted <code>+ 1</code> to apply to the answer of <code>double 4</code>, not to its input.) Still clear, isn't it?`),
 P(`Python needs parentheses around every call, so nested calls pile up brackets at the end. Both styles are fine; you simply read them differently.`),
 PY(`print(double(double(3)))   # 12`),
-P(`Raku lets you drop the parentheses if you use the colon form or method syntax. The most idiomatic way to chain operations is the method style, reading left to right:`),
+P(`Raku lets you drop the parentheses if you use the colon form or method syntax. The most idiomatic way to chain operations is the method style, reading left to right.`),
 RK(`say double(double(3));    # 12
 say 3.&double.&double;    # 12  (call double as a method, twice)`),
-P(`Now the mistake everybody makes. Suppose you write the "doubler" so that it <em>prints</em> its answer instead of outputting it, and then try to use it as a value:`),
+P(`Now the mistake everybody makes. Suppose you write the "doubler" so that it <em>prints</em> its answer instead of outputting it, and then try to use it as a value.`),
 L(`to show.double :n
   print :n * 2
 end
 
 show.double 4
 print show.double 4`, {"error":true}),
-P(`The first call works: it prints 8. The second does not. Logo stops and tells you <code>show.double didn't output to print</code>. Look at that error message. Crystal clear; read it as "print asked <code>show.double</code> for a value, and <code>show.double</code> never gave one". If you ever see an error like that, you used a command where an operation was needed. Python lets you make the same mistake silently, which is one reason I think Logo's strictness is a feature:`),
+P(`The first call works: it prints 8. The second does not. Logo stops and tells you <code>show.double didn't output to print</code>. Look at that message: it is crystal clear. Read it as "print asked <code>show.double</code> for a value, and <code>show.double</code> never gave one". If you ever see an error like that, you used a command where an operation was needed. Python lets you make the same mistake silently, which is one reason I think Logo's strictness is a feature.`),
 PY(`def show_double(n):
     print(n * 2)
 
 print(show_double(4))   # prints 8, then prints None`),
-P(`And Raku, similarly, will happily print the return value of <code>say</code> (which is <code>True</code>):`),
+P(`And Raku, similarly, will happily print the return value of <code>say</code> (which is <code>True</code>).`),
 RK(`sub show-double($n) { say $n * 2 }
 
 say show-double(4);   # prints 8, then True`),
 P(`Rule of thumb: <strong>if a procedure's job is to produce a value, use <code>output</code>. If its job is to show something to a person, use <code>print</code>.</strong> Mixing them up is the commonest reason a beginner's program "almost works". Burn that in. :)`),
-P(`One more detail. <code>output</code> ends the procedure immediately, so any lines after it are never reached:`),
+P(`One more detail. <code>output</code> ends the procedure immediately, so any lines after it are never reached.`),
 L(`to early :n
   output :n
   print "never
@@ -55,15 +55,15 @@ end
 
 print early 3`, {"expect":"3"}),
 P(`The line <code>print "never</code> is dead code. Python's <code>return</code> and Raku's <code>return</code> behave the same way. This will matter a lot when we reach decisions and recursion, because "output as soon as you know the answer" is how most clean procedures are written.`),
-P(`Finally, an operation whose answer is true or false is called a <strong>predicate</strong>. You met the built-in ones in lesson 5 (<code>numberp</code>, <code>emptyp</code>). By convention Logo predicates end in <code>p</code>, and now you can write your own:`),
+P(`Finally, an operation whose answer is true or false is called a <strong>predicate</strong>. You met the built-in ones in lesson 5 (<code>numberp</code>, <code>emptyp</code>). By convention Logo predicates end in <code>p</code>, and now you can write your own.`),
 L(`to bigp :n
   output :n > 100
 end
 
 print bigp 5
 print bigp 500`, {"expect":"false\ntrue"}),
-P(`The expression <code>:n > 100</code> already <em>is</em> true or false, so we can output it directly. A beginner often writes an <code>if</code> to output <code>true</code> or <code>false</code> by hand, which is just a long way of saying the same thing. In Python you would write <code>return n > 100</code> and in Raku just <code>$n &gt; 100</code> as the last statement of the sub; the lesson is language-neutral. Name your yes/no operations well and the code reads like English: <code>if bigp :score [...]</code>.`),
-P(`To finish, here is an operation with two inputs that does something a bit more interesting, and a variable collecting its answer:`),
+P(`The expression <code>:n > 100</code> already <em>is</em> true or false, so we can output it directly. A beginner often writes an <code>if</code> to output <code>true</code> or <code>false</code> by hand, which is just a long way of saying the same thing. In Python you would write <code>return n > 100</code>, and in Raku just <code>$n &gt; 100</code> as the last statement of the sub; the lesson is language-neutral. Name your yes/no operations well and the code reads like English: <code>if bigp :score [...]</code>. Noice.`),
+P(`To finish, here is an operation with two inputs that does something a bit more interesting, and a variable collecting its answer.`),
 L(`to average :a :b
   output (:a + :b) / 2
 end
