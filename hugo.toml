@@ -9,17 +9,16 @@ disablePathToLower = true
   startLevel = 2
   endLevel = 3
 [markup.highlight]
-  style = 'base16-snazzy'
+  style = 'github'
 
 [params]
   BookSection = 'docs'
   BookToC = true
   BookSearch = false
+  BookTheme = 'auto'
+  BookCollapseSection = true
   BookComments = false
 
 [[menus.after]]
   name = 'Main site'
   url = 'https://dersavage.github.io/site/'
-[[menus.after]]
-  name = 'Computer Science blog'
-  url = 'https://dersavage.github.io/cs/'
