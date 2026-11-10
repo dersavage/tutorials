@@ -1,0 +1,18 @@
+module.exports={p:[
+`Building a list is half the job. The other half is asking questions of it: is this thing in the list, what is the third item, how many are there, what does it look like backwards. UCBLogo gives you a compact toolkit for all of this, and in this lesson we will walk through it one question at a time.`,
+`First question: <em>is it in there?</em> The predicate is <code>memberp</code>, and the <code>p</code> at the end tells you it answers true or false. You know the drill by now.`,
+`Its close cousin <code>member</code> does something a little different, and more useful than it first looks: instead of true or false, it hands back <em>the rest of the list starting from the thing you found</em>. If the thing is not there, you get the empty list.`,
+`That is a surprisingly practical design. The answer is a "yes/no" (an empty list means no) <em>and</em> the position, all at once. We will use it later when we look things up.`,
+`<strong>Python</strong> separates these two ideas. <code>in</code> asks the yes/no question, and <code>index</code> finds a position, and raises an error if the thing is missing, which is a rude way to answer "no".`,
+`<strong>Raku</strong> offers the same yes/no with the "element of" operator, and a gentle way to find positions that gives a type-safe "nothing" rather than an exception.`,
+`I like <code>in</code> in Python; it reads naturally. Raku's <code>(elem)</code> uses the mathematical set symbol. Both of them make you do a bit more work to get "the rest of the list from here", which in Logo is one word.`,
+`Second question: <em>what is in position n?</em> That is <code>item</code>. The first thing is position <em>one</em>, as a person would count.`,
+`<code>item 1</code> is the same as <code>first</code>, and <code>item 3</code> on a three-item list is the same as <code>last</code>; use whichever says what you mean. <code>count</code> tells you how many members there are. Asking for an item beyond the end is an error, and that is correct: there is nothing there.`,
+`Python's negative index, and Raku's <code>*-1</code> for "from the end", are good tools that I use all the time. The thing I want you to notice is the position numbering: Python and Raku both begin at 0, so "the third colour" is <code>[2]</code>. That is a convention that serves machines and costs beginners. Logo's <code>item 3</code> is the third item. Teaching 0-based counting is a whole lesson of its own in the other languages, and it is entirely unnecessary here. LOL, and yes, I know I said this already.`,
+`Third question: <em>can I turn it around, or take some out?</em> <code>reverse</code> flips a list. <code>remove</code> takes out every copy of something. <code>iseq</code> makes a list of whole numbers, which is a convenient way to get test data.`,
+`The last line anticipates a later lesson: <code>filter</code> keeps only the members for which the test is true. The question mark stands for "the current member". We will meet it properly when we get to higher-order commands, but you may enjoy the foreshadowing.`,
+`Python's <code>[::-1]</code> is an extended slice, which is wonderfully concise and a dreadful thing to try to read aloud. Raku's methods read left to right and are close to Logo's spirit. Python's comprehension handles <code>filter</code> and <code>remove</code> alike, with a condition at the end.`,
+`Put the toolkit to work. This procedure asks whether a letter is a "vowel": it just checks membership in a list of five letters. Noice.`,
+`<strong>Don't mix up</strong> <code>member</code> (gives the rest of the list) and <code>memberp</code> (gives true/false). In an <code>if</code>, use <code>memberp</code>. Nice little language, isn't it?`
+],
+fn:[]};
