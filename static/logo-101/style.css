@@ -51,3 +51,5 @@ details.play{margin-top:28px;border:1px dashed var(--line);border-radius:8px;pad
 details.play summary{cursor:pointer;font:600 14px system-ui,sans-serif;color:var(--accent)}
 footer{max-width:780px;margin:0 auto;padding:0 16px 40px;font:13px/1.5 system-ui,sans-serif;color:var(--soft)}
 @media(max-width:600px){.index{columns:1}body{font-size:16px}}
+
+.fn{font:14.5px/1.55 system-ui,sans-serif;color:var(--soft);border-top:1px solid var(--line);margin-top:2em}.fn h2{font-size:15px;margin:1em 0 .3em}.fn ol{padding-left:1.4em}sup{font-size:.7em}

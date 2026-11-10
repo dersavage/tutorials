@@ -155,6 +155,7 @@ function section(id) {
     else if (b.t === "py") app.appendChild(cmpBlock(b, "py", "Python", hlPy));
     else if (b.t === "raku") app.appendChild(cmpBlock(b, "raku", "Raku", hlRaku));
   });
+  if (s.fn && s.fn.length) { const f = document.createElement("div"); f.className = "fn"; f.innerHTML = "<h2>Footnotes</h2><ol>" + s.fn.map(t => "<li>" + t + "</li>").join("") + "</ol>"; app.appendChild(f); }
   const h = document.createElement("h2"); h.textContent = "Check your understanding"; app.appendChild(h);
   s.ex.forEach((e, k) => app.appendChild(exercise(e, "s" + s.id + "-e" + (k + 1), updateMeter)));
   const pg = document.createElement("details"); pg.className = "play";
