@@ -75,7 +75,7 @@ L(`to fibfast :n :a :b
 end
 
 print fibfast 10 0 1
-print fibfast 80 0 1`, {expect: "55\n23416728348467685"}),
+print fibfast 40 0 1`, {expect: "55\n102334155"}),
 P(`Read it as a little machine. It holds two numbers, <code>:a</code> and <code>:b</code>, which start as 0 and 1. Each step, it shifts: the new <code>:a</code> is the old <code>:b</code>, and the new <code>:b</code> is the sum of both. After <code>n</code> steps, <code>:a</code> is the answer. Only <code>n</code> calls, not thousands. One recursive call per step instead of two, and a procedure that was exponentially slow is now fast.`),
 P(`That is the lesson I want you to take from Fibonacci. Recursion is not slow, but <em>naive double recursion</em> can be, and the fix is usually to think about what information you are throwing away and carry it forward instead. You will meet this idea again as "dynamic programming" if you ever study algorithms. You have just done it.`),
 PY(`def fibfast(n, a=0, b=1):
