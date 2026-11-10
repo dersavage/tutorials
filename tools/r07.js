@@ -1,0 +1,19 @@
+module.exports={p:[
+`Last lesson's procedures always did exactly the same thing. That is like a calculator with one button. The next step is to let a procedure take <strong>inputs</strong>, so one definition can handle many cases.`,
+`In UCBLogo you list the inputs after the procedure name, each written with a colon. Inside the procedure they behave like variables: the colon reads them. When you call the procedure, you supply values after its name, in the same order. No commas, no parentheses. Look.`,
+`<code>:who</code> is the input. Each call gives it a different value: a word, a word, then a list. <code>sentence</code> glues its inputs into one list (we will study it later), so <code>print</code> shows <code>hello ada</code>. Logo does not care whether <code>who</code> is a word or a list. That is the lack of type declarations again: the procedure works for anything that makes sense.`,
+`In <strong>Python</strong>, inputs are called <em>parameters</em>, written inside parentheses and separated by commas.`,
+`Python's <code>print</code> puts a space between its arguments, so this works too. The Python reader sees parentheses and commas everywhere; Logo's version has only a colon. If you teach beginners, count the punctuation they have to type, and you will see why I like Logo's version.`,
+`<strong>Raku</strong> declares parameters in parentheses as well, with the sigil.`,
+`Raku interpolates variables into double-quoted strings, so <code>"hello $who"</code> inserts the value. Logo has no string interpolation: you build the result with <code>sentence</code> or <code>word</code>, which is more laborious, but also more transparent. You can see exactly what is being glued to what.`,
+`Procedures can take several inputs. List them in order, and supply that many values when you call. Here is a procedure that adds two numbers and prints the result, and one that computes a rectangle's area.`,
+`I made that last line wrong on purpose. <code>area</code> <em>prints</em> its answer; it does not <em>give it back</em>, so <code>add</code> cannot use it as an input. Logo reports that <code>area</code> did not output to <code>add</code>. We fix this properly in the next lesson with <code>output</code>. For now, learn to spot the message: it means a procedure that was expected to produce a value did not. Look at that, a clear error that says what went wrong.`,
+`The error cost us the rest of that block, which is why I reran the good lines separately. In Logo an error stops the current line of work and returns you to the prompt. Nothing is broken. You fix and retry.`,
+`Python makes the same mistake easy and the error message a bit stranger: <code>area</code> returns <code>None</code>, and trying to add that gives a type error. In both languages the cure is the same: make the procedure return its answer instead of printing it.`,
+`What happens if you give the wrong number of inputs? Logo notices.`,
+`UCBLogo says <code>not enough inputs to greet</code>. Python says <code>greet() missing 1 required positional argument: 'who'</code>. Raku's message is similar. All three catch it, and all three are readable. Logo's is the shortest. Noice.`,
+`A final point about names. The names of inputs are <em>local</em> to the procedure. If you have a global variable called <code>x</code> and a procedure with an input called <code>x</code>, they do not interfere: inside the procedure, <code>:x</code> is the input.`,
+`Inside <code>show.x</code>, <code>:x</code> was 5; outside, it was still 100. Logo's name for this is <em>scope</em>, and we will cover it carefully in lesson 9. For today the useful rule is: inputs are private to their procedure.`,
+`All three agree. If I had to name the one thing to remember from this lesson: <em>an input is a variable that the caller fills in</em>. Write procedures that take inputs, name the inputs well, and each procedure becomes a tool you can reuse.`
+],
+fn:[]};
