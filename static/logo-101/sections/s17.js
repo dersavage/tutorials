@@ -40,7 +40,7 @@ say @colours[0];       # red
 say @colours[2];       # blue
 say @colours.elems;    # 3
 say @colours[*-1];     # blue  (last element)`),
-P(`Python's negative index, and Raku's <code>*-1</code> for "from the end", are good tools that I use all the time. The thing I want you to notice is the position numbering: Python and Raku both begin at 0, so "the third colour" is <code>[2]</code>. That is a convention that serves machines and costs beginners. Logo's <code>item 3</code> is the third item. Teaching 0-based counting is a whole lesson of its own in the other languages, and it is entirely unnecessary here. LOL, and yes, I know I said this already.`),
+P(`Python's negative index, and Raku's <code>*-1</code> for "from the end", are good tools that I use all the time. The thing I want you to notice is the position numbering: Python and Raku both begin at 0, so "the third colour" is <code>[2]</code>. That is a convention that serves machines and costs beginners. Logo's <code>item 3</code> is the third item. Teaching 0-based counting is a whole lesson of its own in the other languages, and it is entirely unnecessary here.`),
 P(`Third question: <em>can I turn it around, or take some out?</em> <code>reverse</code> flips a list. <code>remove</code> takes out every copy of something. <code>iseq</code> makes a list of whole numbers, which is a convenient way to get test data.`),
 L(`show reverse [a b c d]
 show remove "b [a b c b]
@@ -64,7 +64,7 @@ end
 
 print vowelp "e
 print vowelp "k`, {"expect":"true\nfalse"}),
-N(`<strong>Don't mix up</strong> <code>member</code> (gives the rest of the list) and <code>memberp</code> (gives true/false). In an <code>if</code>, use <code>memberp</code>. Nice little language, isn't it?`),
+N(`<strong>Don't mix up</strong> <code>member</code> (gives the rest of the list) and <code>memberp</code> (gives true/false). In an <code>if</code>, use <code>memberp</code>.`),
 ],
 fn: [],
 ex: [

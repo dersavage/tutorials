@@ -83,7 +83,7 @@ PY(`def average(a, b):
 avg = average(10, 20)
 print(avg)            # 15.0   (Python's / always gives a float)
 print(average(3, 8))  # 5.5`),
-P(`Small footnote on the Python side: <code>/</code> always produces a float, so the first line prints <code>15.0</code>, not <code>15</code>. UCBLogo prints a whole-number result as a whole number. Neither is wrong, but a beginner will wonder where the <code>.0</code> came from. Nobody should have to explain floats on day one. LOL.`),
+P(`Small footnote on the Python side: <code>/</code> always produces a float, so the first line prints <code>15.0</code>, not <code>15</code>. UCBLogo prints a whole-number result as a whole number. Neither is wrong, but a beginner will wonder where the <code>.0</code> came from. Nobody should have to explain floats on day one.`),
 ],
 fn: [
  "A very common beginner question is \"why does my function print <code>None</code>?\" The answer is always the same: it printed something, but it never returned anything."

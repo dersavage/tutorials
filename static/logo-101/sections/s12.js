@@ -50,7 +50,7 @@ RK(`for 1..3 {
     print "#" x 4;
     say "";
 }`),
-N(`<strong>Remember:</strong> the thing inside the square brackets of <code>repeat</code> is a list of instructions, so a missing <code>]</code> is the most common error. Count your brackets. LOL, I still do.`),
+N(`<strong>Remember:</strong> the thing inside the square brackets of <code>repeat</code> is a list of instructions, so a missing <code>]</code> is the most common error. Count your brackets.`),
 ],
 fn: [
  "Zero-based counting is useful for machines, and I will defend it to anyone. I just do not think a first lesson is the place for it."

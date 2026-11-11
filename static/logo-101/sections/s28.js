@@ -74,7 +74,7 @@ end
 
 make "colour pick.one [red green blue]
 print memberp :colour [red green blue]`, {"expect":"true"}),
-P(`UCBLogo also has a built-in <code>pick</code> that does the same job, but writing it yourself is a good way to see how the pieces fit: a random number in range, a shift by one, an <code>item</code>. Nice little language, isn't it?`),
+P(`UCBLogo also has a built-in <code>pick</code> that does the same job, but writing it yourself is a good way to see how the pieces fit: a random number in range, a shift by one, an <code>item</code>.`),
 PY(`import random
 colour = random.choice(["red", "green", "blue"])
 print(colour in ["red", "green", "blue"])   # True`),

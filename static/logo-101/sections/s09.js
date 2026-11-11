@@ -110,7 +110,7 @@ RK(`sub inner { say $*v }          # looks for a dynamic variable $*v in the cal
 sub outer { my $*v = 1; inner() }
 
 outer;                           # 1`),
-P(`So which is better for a beginner? Honestly, lexical scope is better for large programs, because you can understand a function by reading it alone. Dynamic scope is better for a lesson like this one, because it matches how a person traces a program: "while <code>outer</code> is running, <code>v</code> is 1". For the small programs in this course you will rarely depend on it. The takeaway is simpler: use <code>localmake</code> for temporaries, use inputs for things passed in, and avoid reaching for globals unless you mean to. Nice little language, isn't it?`),
+P(`So which is better for a beginner? Honestly, lexical scope is better for large programs, because you can understand a function by reading it alone. Dynamic scope is better for a lesson like this one, because it matches how a person traces a program: "while <code>outer</code> is running, <code>v</code> is 1". For the small programs in this course you will rarely depend on it. The takeaway is simpler: use <code>localmake</code> for temporaries, use inputs for things passed in, and avoid reaching for globals unless you mean to.`),
 ],
 fn: [
  "Dynamic scope is the older way. Early Lisps worked like this, and later Lisps and most modern languages moved to lexical scope. Logo, as Lisp's friendly cousin, kept the old way, so it still shows you what the old way felt like."

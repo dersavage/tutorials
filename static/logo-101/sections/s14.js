@@ -49,7 +49,7 @@ say @xs[0];         # a
 say @xs[*-1];       # c
 say @xs[1..*];      # (b c)
 say @xs[0..*-2];    # (a b)`),
-P(`That last line is correct Raku and I would not wish it on a beginner. <code>0..*-2</code> means "from zero to two before the end". It works, and it is also exactly the kind of expression you have to stop and decode. Compare it with <code>bl</code>. LOL.`),
+P(`That last line is correct Raku and I would not wish it on a beginner. <code>0..*-2</code> means "from zero to two before the end". It works, and it is also exactly the kind of expression you have to stop and decode. Compare it with <code>bl</code>.`),
 P(`What happens at the edges? Take the first of nothing and Logo complains, loudly and helpfully. But taking the butfirst of a one-character word is fine; you just get the empty word, which shows as a blank line.`),
 L(`show bf "a
 print count bf "a`, {"expect":"\n0"}),
@@ -66,7 +66,7 @@ say @e[0];    # (Any)`),
 P(`Both choices are defensible. Python's slicing rule is deliberate and handy once you know it. Raku's undefined values are a design decision with a long history. But I prefer Logo's stance for a first language: if you ask for something that cannot exist, you hear about it right away, and the message names the guilty word.`),
 P(`Finally, because each of these four verbs outputs a value, you can nest them. To get the third character of a word, take the first of the butfirst of the butfirst. Read it from the right: peel two off the front, then take the first of what is left.`),
 L(`show first bf bf "hello`, {"expect":"l"}),
-P(`Is that the fastest way to get the third character? No. Lesson 15 gives you <code>item</code>, which is. But peeling is the way of thinking you need for recursion, and you will use it constantly by lesson 19. Python would write <code>"hello"[2]</code> and Raku would write <code>"hello".substr(2, 1)</code>, both shorter, and both teaching you less about the shape of the problem. Nice little language, isn't it?`),
+P(`Is that the fastest way to get the third character? No. Lesson 15 gives you <code>item</code>, which is. But peeling is the way of thinking you need for recursion, and you will use it constantly by lesson 19. Python would write <code>"hello"[2]</code> and Raku would write <code>"hello".substr(2, 1)</code>, both shorter, and both teaching you less about the shape of the problem.`),
 ],
 fn: [
  "Yes, I know. Programmers count from zero for good reasons, and I have defended them at length elsewhere. I just do not think zero belongs in the first ten minutes."

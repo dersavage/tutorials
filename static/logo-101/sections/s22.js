@@ -89,7 +89,7 @@ RK(`sub fibfast(Int $n, $a = 0, $b = 1) {
 }
 
 say fibfast(80);   # 23416728348467685`),
-P(`Python gives you default values for <code>a</code> and <code>b</code> so you can call <code>fibfast(40)</code> with one argument. Raku does the same with <code>$a = 0</code>. UCBLogo can do this too with optional inputs, but I am keeping it simple. A beginner calling <code>fibfast 40 0 1</code> knows exactly what the machine starts with. Nice little language, isn't it?`),
+P(`Python gives you default values for <code>a</code> and <code>b</code> so you can call <code>fibfast(40)</code> with one argument. Raku does the same with <code>$a = 0</code>. UCBLogo can do this too with optional inputs, but I am keeping it simple. A beginner calling <code>fibfast 40 0 1</code> knows exactly what the machine starts with.`),
 ],
 fn: [
  "Caching is a perfectly respectable technique, and I am not knocking it. I am knocking reaching for it before you know why you need it."

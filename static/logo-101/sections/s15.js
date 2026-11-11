@@ -83,7 +83,7 @@ PY(`print("ell" in "hello")      # True
 print("xyz" in "hello")      # False`),
 RK(`say "hello".contains("ell");   # True
 say "hello".contains("xyz");   # False`),
-P(`That is a full toolbox for words. You can measure them, pick letters from them, glue them, change their case and look at their codes. Nothing else in a first course needs more. Nice little language, isn't it?`),
+P(`That is a full toolbox for words. You can measure them, pick letters from them, glue them, change their case and look at their codes. Nothing else in a first course needs more.`),
 ],
 fn: [
  "The classic counter-argument is that zero-based indexing makes slice arithmetic cleaner. It does. Keep that in your pocket for week six."

@@ -69,7 +69,7 @@ PY(`def raise_(b, e):
 
 print(raise_(2, 10))   # 1024
 print(2 ** 10)         # 1024`),
-P(`I had to call it <code>raise_</code> because <code>raise</code> is a reserved word in Python. Logo has no reserved words at all in this sense: you can define things however you like, and the system will tell you if you collide with a primitive. Fewer reserved words means fewer surprises on day one. LOL.`),
+P(`I had to call it <code>raise_</code> because <code>raise</code> is a reserved word in Python. Logo has no reserved words at all in this sense: you can define things however you like, and the system will tell you if you collide with a primitive. Fewer reserved words means fewer surprises on day one.`),
 P(`<strong>Raku</strong> has the <code>**</code> operator too. The recursive version, with a multi.`),
 RK(`multi raise($b, 0) { 1 }
 multi raise($b, $e) { $b * raise($b, $e - 1) }

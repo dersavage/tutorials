@@ -78,10 +78,10 @@ print(count_vowels("rhythm"))   # 0`),
 P(`<strong>Raku</strong> would use a regex to pick out the vowels, then count the matches.`),
 RK(`say "banana".comb(/<[aeiou]>/).elems;   # 3
 say "rhythm".comb(/<[aeiou]>/).elems;   # 0`),
-P(`The honest summary of this lesson: in both comparison languages, you would almost never recurse over letters, because they give you better tools. In Logo, recursion <em>is</em> the tool, and that is why it makes a good place to learn it. When you meet an iterator, a generator or a regex later, you will know what they are doing underneath. Nice little language, isn't it?`),
+P(`The honest summary of this lesson: in both comparison languages, you would almost never recurse over letters, because they give you better tools. In Logo, recursion <em>is</em> the tool, and that is why it makes a good place to learn it. When you meet an iterator, a generator or a regex later, you will know what they are doing underneath.`),
 ],
 fn: [
- "\"Nothing to carry\" is the whole argument. I have met people who can write the one-liner and cannot explain why it works. LOL, I was one of them once."
+ "\"Nothing to carry\" is the whole argument. I have met people who can write the one-liner and cannot explain why it works."
 ],
 ex: [
 MC(`What does <code>bf "a</code> output (the <code>butfirst</code> of a one-letter word)?`, ["An error","The word <code>a</code>","The empty word","The number 0"], 2, `Removing the only letter leaves nothing: the empty word. That is why <code>emptyp</code> works as a base case when you chew through a word.`),

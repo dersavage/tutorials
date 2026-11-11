@@ -3,7 +3,7 @@ id: 2,
 title: "Words, numbers, and lists",
 tagline: "Logo has almost no types to learn, and that is the point",
 blocks: [
-P(`Ask a beginner what a program works with and they will say, "numbers, I guess". Ask a working programmer and you get a fifteen-minute lecture on integers, floats, strings, booleans, arrays, dictionaries, and the difference between a tuple and a list. Both answers are right, LOL. And the gap between them is where many beginners fall in and never climb out.`),
+P(`Ask a beginner what a program works with and they will say, "numbers, I guess". Ask a working programmer and you get a fifteen-minute lecture on integers, floats, strings, booleans, arrays, dictionaries, and the difference between a tuple and a list. Both answers are right. And the gap between them is where many beginners fall in and never climb out.`),
 P(`Logo takes the opposite road. In Logo, as in Lisp, its great-grandparent, there are really only two kinds of data to think about: <strong>words</strong> and <strong>lists</strong>. That is it.<sup>[1]</sup> Remember the two kinds of things from lesson one? Things that act, and things that are acted upon. Words and lists are the second kind.`),
 P(`A <strong>word</strong> is a chunk of characters with no spaces in it, and you write one with a quote mark in front. A <strong>list</strong> is a sequence of things in square brackets, and each thing is itself a word or another list. Let's print a word first, then a number for good measure.`),
 L(`print "apple

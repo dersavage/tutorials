@@ -98,7 +98,7 @@ P(`Raku can show you the sub object, though not neatly as source. That is fine. 
 P(`Take-away: <code>to name ... end</code> defines; the name then works like any command; define small procedures and build bigger ones from them.`),
 ],
 fn: [
- "A function that \"does nothing\" is very often a function that was never called. LOL, we have all been there."
+ "A function that \"does nothing\" is very often a function that was never called."
 ],
 ex: [
 MC(`Which line finishes a procedure definition in UCBLogo?`, ["<code>stop</code>","<code>end</code>","<code>done</code>","A closing brace"], 1, `A definition is wrapped by <code>to name</code> at the top and <code>end</code> at the bottom.`),

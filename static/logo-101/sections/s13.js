@@ -75,7 +75,7 @@ RK(`sub table($n) {
     say "{$_}x$n={$_ * $n}" for 1..5;
 }
 table(7);`),
-N(`<strong>Which loop?</strong> Know the count: <code>repeat</code>. Need a counter variable: <code>for</code>. Waiting on a condition: <code>while</code> or <code>until</code>. When in doubt, try <code>repeat</code> first; it is the simplest. Nice little language, isn't it?`),
+N(`<strong>Which loop?</strong> Know the count: <code>repeat</code>. Need a counter variable: <code>for</code>. Waiting on a condition: <code>while</code> or <code>until</code>. When in doubt, try <code>repeat</code> first; it is the simplest.`),
 ],
 fn: [
  "Raku is a descendant of Perl, and carries a lot of Perl's habits with it. It is nicer about it, mostly. :)"

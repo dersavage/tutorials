@@ -61,7 +61,7 @@ say "zebra" lt "ant";             # False
 say "b" ∈ <a b c>;                # True
 say "z" (elem) <a b c>;           # False`),
 P(`Raku has the set-theory operator <code>∈</code> (and an ASCII twin, <code>(elem)</code>) and the string comparison <code>lt</code>. Powerful, and fun if you like mathematical notation. For a first look at "does this thing belong", <code>memberp</code> is plain and does the job.`),
-P(`Predicates are the bridge to making decisions: once you can ask a question, you can make a program choose. But first we need a way to package instructions under a name of our own. So that is the next lesson. Nice little language, isn't it?`),
+P(`Predicates are the bridge to making decisions: once you can ask a question, you can make a program choose. But first we need a way to package instructions under a name of our own. So that is the next lesson.`),
 ],
 fn: [],
 ex: [

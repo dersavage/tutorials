@@ -34,7 +34,7 @@ P(`<strong>Raku</strong> makes <code>map</code> a method and has the "whatever s
 RK(`say (1, 2, 3, 4).map(* * 2);          # (2 4 6 8)
 say <cat dog bird>.map(* ~ "s");        # (cats dogs birds)
 say <a b c>.map(*.uc);                  # (A B C)`),
-P(`That star is Raku's <code>?</code>. It's compact and powerful. It also takes a while to read fluently when you meet <code>* * 2</code>: a star that's a hole, then a multiplication, then a literal two. LOL.`),
+P(`That star is Raku's <code>?</code>. It's compact and powerful. It also takes a while to read fluently when you meet <code>* * 2</code>: a star that's a hole, then a multiplication, then a literal two.`),
 P(`You can also use <code>map</code> with <em>your own</em> procedures, which is where it gets powerful. Here is a procedure that adds an exclamation mark to a word, and then a map over a list of words.`),
 L(`to shout :w
   output word :w "!
@@ -52,7 +52,7 @@ RK(`sub shout($w) { $w ~ "!" }
 say <hi there>.map(&shout);                 # (hi! there!)
 say <apple fig banana>.map(*.chars);        # (5 3 6)`),
 P(`The Raku <code>&amp;shout</code> is the name of the procedure as a thing you can pass around, in the same way that Logo passes <code>"shout</code> as a quoted name. The idea is shared across all three languages; each one just spells the "here is a procedure, don't call it yet" gesture in its own way.`),
-N(`<strong>foreach vs map.</strong> Use <code>foreach</code> when you want something <em>done</em> for each item (printing, say). Use <code>map</code> when you want a new <em>list of answers</em>. If you catch yourself building a list inside a <code>foreach</code> with <code>lput</code>, you probably wanted <code>map</code>. Nice little language, isn't it?`),
+N(`<strong>foreach vs map.</strong> Use <code>foreach</code> when you want something <em>done</em> for each item (printing, say). Use <code>map</code> when you want a new <em>list of answers</em>. If you catch yourself building a list inside a <code>foreach</code> with <code>lput</code>, you probably wanted <code>map</code>.`),
 ],
 fn: [
  "If this sounds like Lisp, that is because it is. Logo kept the good part, the programs-are-lists part, and left the parentheses at the door."

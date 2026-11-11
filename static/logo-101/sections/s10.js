@@ -97,7 +97,7 @@ RK(`sub grade($s) {
     elsif $s >= 80 { say "B" }
     else           { say "C" }
 }`),
-P(`That is a fair point in their favour. The compensation, in Logo, is that you can always split a long decision into several small procedures, each with a name, and I would argue that is better design anyway. A last tip: put the interesting test <em>first</em> and the default <em>last</em>, and every branch of your decision will explain itself. Nice little language, isn't it?`),
+P(`That is a fair point in their favour. The compensation, in Logo, is that you can always split a long decision into several small procedures, each with a name, and I would argue that is better design anyway. A last tip: put the interesting test <em>first</em> and the default <em>last</em>, and every branch of your decision will explain itself.`),
 ],
 fn: [
  "Other languages let you flatten this with an <code>else if</code> keyword, and I will admit that is a real convenience. Logo's answer, as the next paragraph says, is to split the decision into small named procedures."

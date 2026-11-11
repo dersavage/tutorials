@@ -47,10 +47,10 @@ RK(`print "ab";
 print "cd";
 say "ef";`),
 P(`Python's version asks you to know about keyword arguments and the empty string before you have even seen a function. Raku's is tidy, but you have to remember that <code>say</code> and <code>print</code> differ only by a trailing newline. Logo spends three different words on three different jobs, and each does exactly one thing. That is what I mean when I call it a good teaching language: small vocabulary, and the words do what they say.`),
-P(`That's lesson one. You have already met the idea that will carry us through the whole course: in Logo there are only two kinds of things, the things that <em>act</em> (<code>print</code>, <code>show</code>, <code>type</code>, <code>sum</code>) and the things that are <em>acted upon</em> (<code>"hello</code>, <code>[hello, world]</code>, <code>2</code>). Nothing else. Hold on to that. Nice little language, isn't it?`),
+P(`That's lesson one. You have already met the idea that will carry us through the whole course: in Logo there are only two kinds of things, the things that <em>act</em> (<code>print</code>, <code>show</code>, <code>type</code>, <code>sum</code>) and the things that are <em>acted upon</em> (<code>"hello</code>, <code>[hello, world]</code>, <code>2</code>). Nothing else. Hold on to that.`),
 ],
 fn: [
- "I am deliberately comparing the first thirty seconds. Over thirty years, of course, Python's reach wins easily. But nobody ever quit programming in the first thirty years. LOL, well, nobody I know."
+ "I am deliberately comparing the first thirty seconds. Over thirty years, of course, Python's reach wins easily. But nobody ever quit programming in the first thirty years."
 ],
 ex: [
 MC(`Which command shows a list <em>exactly</em> as Logo stores it, outer brackets included?`, ["<code>print</code>","<code>show</code>","<code>type</code>","<code>say</code>"], 1, `<code>show</code> keeps the brackets. <code>print</code> removes the outer pair because it is aimed at human readers.`),

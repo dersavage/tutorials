@@ -45,7 +45,7 @@ L(`to average :a :b
 end
 
 print average 4 10`, {"expect":"a is 4 b is 10\n7"}),
-P(`The first <code>print</code> is scaffolding: it shows the inputs as the procedure sees them. When you've found the bug, delete it. Printing is not shameful. It's the oldest debugging tool there is, and it works in every language ever invented. LOL.`),
+P(`The first <code>print</code> is scaffolding: it shows the inputs as the procedure sees them. When you've found the bug, delete it. Printing is not shameful. It's the oldest debugging tool there is, and it works in every language ever invented.`),
 PY(`def average(a, b):
     print("a is", a, "b is", b)   # scaffolding
     return (a + b) / 2

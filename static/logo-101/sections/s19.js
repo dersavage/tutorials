@@ -82,7 +82,7 @@ RK(`sub upto($from, $to) {
     upto($from + 1, $to);
 }
 upto(4, 7);`),
-N(`<strong>Checklist for any recursive procedure:</strong> (1) What is the base case, and does the procedure stop there? (2) Does every recursive call move closer to the base case? If both answers are yes, it will work. Nice little language, isn't it?`),
+N(`<strong>Checklist for any recursive procedure:</strong> (1) What is the base case, and does the procedure stop there? (2) Does every recursive call move closer to the base case? If both answers are yes, it will work.`),
 ],
 fn: [
  "In Logo there is no ceremony at all. You call the procedure from inside itself. Compare that with languages where you wonder whether you are allowed to."

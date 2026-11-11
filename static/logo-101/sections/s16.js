@@ -69,7 +69,7 @@ PY(`def squares(n):
 squares2 = lambda n: [i * i for i in range(1, n + 1)]`),
 RK(`sub squares($n) { (1..$n).map(* ** 2).list }
 say squares(5);    # (1 4 9 16 25)`),
-P(`Python's comprehension and Raku's <code>map</code> are shorter, and professional programmers prefer them. They also hide the "start empty, add as you go" mechanism that Logo shows you. For learning, I'd rather you wrote the loop out a few times before you reach for the shorthand. Nice little language, isn't it?`),
+P(`Python's comprehension and Raku's <code>map</code> are shorter, and professional programmers prefer them. They also hide the "start empty, add as you go" mechanism that Logo shows you. For learning, I'd rather you wrote the loop out a few times before you reach for the shorthand.`),
 ],
 fn: [
  "The old Lisp programmers had a phrase for the in-place habit: \"spooky action at a distance\". It is not a compliment."
