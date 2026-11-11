@@ -5,6 +5,6 @@ type: docs
 
 # Tutorials
 
-Step-by-step tutorials with worked examples. **This site is a work in progress and will be ready in the near future.**
+Programming tutorials by Jan Savage
 
-Available now: [Logo 101]({{< relref "/docs/logo-101" >}}).
+Learn Logo and diff against Raku and Python: [Logo 101]({{< relref "/docs/logo-101" >}}).
