@@ -9,4 +9,4 @@ A beginner course in programming, taught through **UCBLogo** (Berkeley Logo). Th
 
 **[Start the course →](/tutorials/logo-101/)**
 
-*Lesson text is licensed CC BY 4.0; code samples and the in-page interpreter are MIT-licensed.*
+© Jan Savage
